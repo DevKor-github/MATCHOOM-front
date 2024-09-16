@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "react/no-unescaped-entities": 0
+  },
+  "extends": [
+    "eslint:recommended",
+    "@react-native-community",
+    "plugin:prettier/recommended"
+  ]
+}

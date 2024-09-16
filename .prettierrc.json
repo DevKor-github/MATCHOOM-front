@@ -1,0 +1,25 @@
+{
+  "tabWidth": 2,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "importOrder": [
+    "^pages/(.*)$",
+    "^components/(.*)$",
+    "^hooks/(.*)$",
+    "^store/(.*)$",
+    "^utils/(.*)$",
+    "^services/(.*)$",
+    "^styles/(.*)$",
+    "^types/(.*)$",
+    "^features/(.*)$",
+    "^public/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSortSpecifiers": true,
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "babel.config.js"],
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ]
+}
