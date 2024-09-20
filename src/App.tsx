@@ -1,10 +1,12 @@
-import { Text, View } from 'react-native';
+import BottomTabs from '@/navigation/BottomTabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 
 const App = () => {
   return (
-    <View className='flex-1 items-center justify-center bg-green-200'>
-      <Text className='text-2xl font-bold'>MATCHOOM</Text>
-    </View>
+    <NavigationContainer>
+      <BottomTabs />
+    </NavigationContainer>
   );
 };
 
