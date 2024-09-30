@@ -3,10 +3,7 @@ import { useLayoutEffect } from 'react';
 import { authInstance } from 'services/config';
 
 const useAxiosInterceptor = () => {
-  // const router = useRouter();
-  // const { getAuth, removeAuth } = useAuth();
-  // const { accessToken } = getAuth();
-
+  // TODO: 토큰 관리 로직으로 바꾸기
   const accessToken = 'ACCESS_TOKEN';
 
   useLayoutEffect(() => {
@@ -27,6 +24,8 @@ const useAxiosInterceptor = () => {
         console.error(error);
 
         if (error.status === 401) {
+          // TODO: access token 재발급 로직 구현하기
+          console.error('토큰이 만료되었습니다.');
         }
       },
     );
