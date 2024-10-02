@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        pretendard: ['Pretendard'],
+        sans: ['Pretendard', 'Arial'],
       },
       colors: {
         green: '#74EFC2',
