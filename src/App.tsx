@@ -1,8 +1,16 @@
 import BottomTabs from '@/navigation/BottomTabs';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
+import { useEffect } from 'react';
+
+// import SplashScreen from 'react-native-splash-screen';
 
 const App = () => {
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     SplashScreen.hide();
+  //   }, 1000);
+  // });
+
   return (
     <NavigationContainer>
       <BottomTabs />
