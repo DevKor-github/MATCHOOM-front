@@ -13,7 +13,10 @@ const Stack = createNativeStackNavigator<HomeStackType>();
 
 const HomeStack = () => {
   return (
-    <Stack.Navigator initialRouteName='Home'>
+    <Stack.Navigator
+      initialRouteName='Home'
+      screenOptions={{ headerShown: false }}
+    >
       <Stack.Screen name='Home' component={HomePage} />
       <Stack.Screen
         name='Course'

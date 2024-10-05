@@ -10,7 +10,7 @@ const HomePage = ({ navigation }: Props) => {
   };
 
   return (
-    <View>
+    <View className='bg-background'>
       <Text>
         HOME
         <Button title='Go to Course' onPress={handleClick} />
