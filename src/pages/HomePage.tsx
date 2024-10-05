@@ -1,6 +1,6 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { Button, Text, View } from 'react-native';
 import { HomeStackType } from 'navigation/HomeStack';
+import { Button, Text, View } from 'react-native';
 
 type Props = NativeStackScreenProps<HomeStackType, 'Home'>;
 
