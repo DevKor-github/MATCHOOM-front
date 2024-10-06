@@ -1,20 +1,12 @@
-import { ScrollView, Text, View } from 'react-native';
-import Card from '@/features/explore/components/Card';
+import { ScrollView } from 'react-native';
+import ListCarousel from '@/features/explore/components/ListCarousel';
 import { MOCK_CARDS } from '@/features/explore/mock/card';
 
 const ExplorePage = () => {
   return (
-    <ScrollView className='flex-1 bg-red-400'>
-      <Text>Explore</Text>
-      {MOCK_CARDS.map((card) => (
-        <Card
-          key={card.title} // TODO: id로 변경
-          title={card.title}
-          description={card.description}
-          guide={card.guide}
-          imageSrc={card.imageSrc}
-        />
-      ))}
+    <ScrollView className='bg-background flex-1 px-5'>
+      <ListCarousel title='HOT' cards={MOCK_CARDS} />
+      <ListCarousel title='꿀조합 컬렉션' cards={MOCK_CARDS} />
     </ScrollView>
   );
 };
