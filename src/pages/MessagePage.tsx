@@ -1,11 +1,11 @@
 import { Text, View } from 'react-native';
 
-const CourseAddPage = () => {
+const MessagePage = () => {
   return (
     <View>
-      <Text>Course</Text>
+      <Text>Likes</Text>
     </View>
   );
 };
 
-export default CourseAddPage;
+export default MessagePage;
