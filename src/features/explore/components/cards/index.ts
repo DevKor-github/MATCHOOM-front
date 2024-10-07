@@ -1,5 +1,6 @@
 import PrimaryCard from './PrimaryCard';
 import RectangleCard from './RectangleCard';
+import SquareCard from './SquareCard';
 
 export interface CardType {
   title: string;
@@ -10,4 +11,5 @@ export interface CardType {
 
 export const Card = Object.assign(PrimaryCard, {
   Rectangle: RectangleCard,
+  Square: SquareCard,
 });
