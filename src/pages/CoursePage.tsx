@@ -1,17 +1,12 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { Text, View } from 'react-native';
 import { HomeStackType } from 'navigation/HomeStack';
+import { Text, View } from 'react-native';
+import WebView from 'react-native-webview';
 
 type Props = NativeStackScreenProps<HomeStackType, 'Course'>;
 
 const CoursePage = ({ route }: Props) => {
-  const { id } = route.params;
-
-  return (
-    <View>
-      <Text>COURSE PAGE {id}</Text>
-    </View>
-  );
+  return <WebView source={{ uri: 'https://www.figma.com' }} />;
 };
 
 export default CoursePage;
