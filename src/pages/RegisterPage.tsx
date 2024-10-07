@@ -1,4 +1,8 @@
 import { DEFAULT_REGISTER_FORM } from '@/constants/register';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Text, TouchableOpacity, View } from 'react-native';
 import RoundButton from '@/features/register/Button/RoundButton';
 import AreaInputTab from '@/features/register/Tab/AreaInputTab';
 import AuthInputTab from '@/features/register/Tab/AuthInputTab';
@@ -11,10 +15,6 @@ import {
   TabTypeValues,
   registerSchema,
 } from '@/types/register';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { Text, TouchableOpacity, View } from 'react-native';
 
 const TEXT = {
   matchoom: 'matchoom',
@@ -76,7 +76,7 @@ const RegisterPage = () => {
       {tab !== 0 ? (
         <View className='h-16 w-full flex-row items-center justify-center'>
           <TouchableOpacity
-            className='h-full w-4 border-2 border-white'
+            className='absolute top-0 h-full w-full'
             onPress={() => setTab(tab - 1)}
           />
           <Text className='text-xl font-medium text-white'>

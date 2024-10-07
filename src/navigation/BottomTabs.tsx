@@ -1,21 +1,39 @@
-import CourseAddPage from '@/pages/CourseAddPage';
-import LikesPage from '@/pages/LikesPage';
-import LogPage from '@/pages/LogPage';
-import MyPage from '@/pages/MyPage';
-import RegisterPage from '@/pages/RegisterPage';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import ExplorePage from '@/pages/ExplorePage';
+import MessagePage from '@/pages/MessagePage';
+import MyPage from '@/pages/MyPage';
 import HomeStack from './HomeStack';
 
 const Tab = createBottomTabNavigator();
 
 const BottomTabs = () => {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name='HomeTab' component={HomeStack} />
-      <Tab.Screen name='LogTab' component={RegisterPage} />
-      <Tab.Screen name='CourseAddTab' component={CourseAddPage} />
-      <Tab.Screen name='LikesTab' component={LikesPage} />
-      <Tab.Screen name='MyTab' component={MyPage} />
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: { backgroundColor: '#121212' },
+      }}
+    >
+      <Tab.Screen
+        name='HomeTab'
+        component={HomeStack}
+        options={{ title: '홈' }}
+      />
+      <Tab.Screen
+        name='ExploreTab'
+        component={ExplorePage}
+        options={{ title: '탐색' }}
+      />
+      <Tab.Screen
+        name='MessageTab'
+        component={MessagePage}
+        options={{ title: '메시지' }}
+      />
+      <Tab.Screen
+        name='MyTab'
+        component={MyPage}
+        options={{ title: '내 정보' }}
+      />
     </Tab.Navigator>
   );
 };
