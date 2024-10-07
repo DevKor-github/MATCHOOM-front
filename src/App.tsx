@@ -1,18 +1,27 @@
-import BottomTabs from '@/navigation/BottomTabs';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { useEffect } from 'react';
 import { SafeAreaView } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import BottomTabs from '@/navigation/BottomTabs';
+import RegisterPage from '@/pages/RegisterPage';
 import { tabNavigationRef } from '@/utils/handleTabNavigation';
 import Header from '@/components/common/Header';
 
 const App = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      SplashScreen.hide();
+    }, 1000);
+  });
+
   return (
-    <NavigationContainer>
-      <BottomTabs />
-    </NavigationContainer>
+    <SafeAreaView className='flex-1 bg-background'>
+      {/* <RegisterPage /> */}
+      <Header />
+      <NavigationContainer ref={tabNavigationRef}>
+        <BottomTabs />
+      </NavigationContainer>
+    </SafeAreaView>
   );
 };
 
