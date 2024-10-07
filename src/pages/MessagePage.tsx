@@ -1,11 +1,8 @@
 import { Text, View } from 'react-native';
+import WebView from 'react-native-webview';
 
 const MessagePage = () => {
-  return (
-    <View>
-      <Text>Likes</Text>
-    </View>
-  );
+  return <WebView source={{ uri: 'https://www.youtube.com/' }} />;
 };
 
 export default MessagePage;

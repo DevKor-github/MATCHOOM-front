@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { SafeAreaView } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import BottomTabs from '@/navigation/BottomTabs';
+import RegisterPage from '@/pages/RegisterPage';
 import { tabNavigationRef } from '@/utils/handleTabNavigation';
 import Header from '@/components/common/Header';
 
@@ -14,7 +15,8 @@ const App = () => {
   });
 
   return (
-    <SafeAreaView className='bg-background flex-1'>
+    <SafeAreaView className='flex-1 bg-background'>
+      {/* <RegisterPage /> */}
       <Header />
       <NavigationContainer ref={tabNavigationRef}>
         <BottomTabs />
