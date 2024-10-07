@@ -1,6 +1,6 @@
 import { ScrollView, Text, View } from 'react-native';
 import { MOCK_CARDS } from '../mock/card';
-import { Card } from './cards';
+import { Card } from './Card';
 
 const RectangleCarousel = () => {
   return (
