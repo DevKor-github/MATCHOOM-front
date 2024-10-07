@@ -1,11 +1,13 @@
 import BottomTabs from '@/navigation/BottomTabs';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import RegisterPage from '@/pages/RegisterPage';
 import { NavigationContainer } from '@react-navigation/native';
+import { useState } from 'react';
 
 const App = () => {
+  const [isLogin, setLogin] = useState(false);
   return (
     <NavigationContainer>
-      <BottomTabs />
+      {isLogin ? <BottomTabs /> : <RegisterPage />}
     </NavigationContainer>
   );
 };
