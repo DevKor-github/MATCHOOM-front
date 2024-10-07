@@ -2,18 +2,16 @@ import { ScrollView, Text, View } from 'react-native';
 import { MOCK_CARDS } from '../mock/card';
 import { Card } from './cards';
 
-const RectangleCarousel = () => {
+const SquareCarousel = () => {
   return (
     <View className='mb-5 flex-1'>
-      <Text className='mb-3 text-base font-bold text-white'>
-        오늘의 큐레이션
-      </Text>
+      <Text className='mb-3 text-base font-bold text-white'>곧 마감돼요!</Text>
       <ScrollView horizontal>
         {MOCK_CARDS.map((card, index) => (
-          <Card.Rectangle
+          <Card.Square
             key={index} // TODO: id로 변경
             title={card.title}
-            description={card.description}
+            guide={card.guide}
             imageSrc={card.imageSrc}
           />
         ))}
@@ -22,4 +20,4 @@ const RectangleCarousel = () => {
   );
 };
 
-export default RectangleCarousel;
+export default SquareCarousel;
