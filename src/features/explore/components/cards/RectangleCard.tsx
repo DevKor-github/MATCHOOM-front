@@ -5,7 +5,7 @@ type Props = Omit<CardType, 'guide'>;
 
 const RectangleCard = ({ title, description, imageSrc }: Props) => {
   return (
-    <Pressable className='relative h-[140px] w-[282px] overflow-hidden rounded-[10px]'>
+    <Pressable className='relative mr-3 h-[140px] w-[282px] overflow-hidden rounded-[10px]'>
       <Image
         source={{
           uri: imageSrc,
