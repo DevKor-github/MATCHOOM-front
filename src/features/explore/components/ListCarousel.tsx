@@ -1,5 +1,5 @@
 import { Pressable, Text, View } from 'react-native';
-import Card, { CardType } from './Card';
+import { Card, CardType } from './cards';
 
 interface Props {
   title: string;

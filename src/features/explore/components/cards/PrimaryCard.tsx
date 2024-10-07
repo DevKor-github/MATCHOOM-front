@@ -1,13 +1,7 @@
 import { Image, Pressable, Text, View } from 'react-native';
+import { CardType } from '.';
 
-export interface CardType {
-  title: string;
-  description: string;
-  guide: string;
-  imageSrc: string;
-}
-
-const Card = ({ title, description, guide, imageSrc }: CardType) => {
+const PrimaryCard = ({ title, description, guide, imageSrc }: CardType) => {
   return (
     <Pressable className='bg-background mb-3 flex h-[84px] w-full flex-1 flex-row'>
       <View>
@@ -29,4 +23,4 @@ const Card = ({ title, description, guide, imageSrc }: CardType) => {
   );
 };
 
-export default Card;
+export default PrimaryCard;
