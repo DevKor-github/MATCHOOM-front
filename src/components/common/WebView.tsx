@@ -35,14 +35,15 @@ const WebView = ({ uri }: Props) => {
     );
   };
 
-  const handleInit = async () => {
-    if (!webviewRef.current) {
-      return;
-    }
+  const postToken = async () => {
     const refreshToken = await getRefreshToken();
     const accessToken = await getAccessToken();
     const token = refreshToken + ' ' + accessToken;
     postMessage({ type: 'INIT', value: token });
+  };
+
+  const postRefresh = async () => {
+    postMessage({ type: 'REFRESH' });
   };
 
   const handleLogout = () => {
@@ -71,7 +72,8 @@ const WebView = ({ uri }: Props) => {
         style={{ backgroundColor: '#121212' }}
         ref={webviewRef}
         source={{ uri }}
-        onLoadStart={handleInit}
+        onLoadStart={postToken}
+        onLoadEnd={postRefresh}
         onMessage={handleMessage}
       />
     </View>
