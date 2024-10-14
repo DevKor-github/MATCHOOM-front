@@ -1,8 +1,7 @@
-import { Text, View } from 'react-native';
-import WebView from 'react-native-webview';
+import WebView from 'components/common/WebView';
 
 const ExplorePage = () => {
-  return <WebView source={{ uri: 'https://www.notion.so' }} />;
+  return <WebView uri='http://localhost:3000/explore' />;
 };
 
 export default ExplorePage;

@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import ExplorePage from '@/pages/ExplorePage';
-import MessagePage from '@/pages/MessagePage';
-import MyPage from '@/pages/MyPage';
+import ExplorePage from 'pages/ExplorePage';
+import MessagePage from 'pages/MessagePage';
+import MyPage from 'pages/MyPage';
 import HomeStack from './HomeStack';
 
 const Tab = createBottomTabNavigator();

@@ -1,6 +1,6 @@
-import CoursePage from '@/pages/CoursePage';
-import HomePage from '@/pages/HomePage';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import CoursePage from 'pages/CoursePage';
+import HomePage from 'pages/HomePage';
 
 export type HomeStackType = {
   Home: undefined;

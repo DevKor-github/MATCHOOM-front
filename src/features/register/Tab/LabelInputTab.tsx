@@ -1,7 +1,7 @@
-import { LABEL_LIST } from '@/constants/register';
-import { RegisterFormType } from '@/types/register';
+import { LABEL_LIST } from 'constants/register';
 import { Control, Controller } from 'react-hook-form';
 import { Text, View } from 'react-native';
+import { RegisterFormType } from 'types/register';
 import LabelButton from '../Button/LabelButton';
 import Subheader from '../Header/SubHeader';
 
