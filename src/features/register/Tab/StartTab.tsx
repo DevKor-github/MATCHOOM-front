@@ -1,5 +1,5 @@
-import { COLORS } from '@/constants/colors';
 import MaskedView from '@react-native-masked-view/masked-view';
+import { COLORS } from 'constants/colors';
 import { Text, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 

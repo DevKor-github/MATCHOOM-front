@@ -1,9 +1,9 @@
-import { RegisterFormType } from '@/types/register';
-import { getStringByDate } from '@/utils/date';
 import { useState } from 'react';
 import { Control, Controller, useWatch } from 'react-hook-form';
 import { Text, View } from 'react-native';
 import DatePicker from 'react-native-date-picker';
+import { getStringByDate } from 'utils/date';
+import { RegisterFormType } from 'types/register';
 import BoxButton from '../Button/BoxButton';
 import Subheader from '../Header/SubHeader';
 

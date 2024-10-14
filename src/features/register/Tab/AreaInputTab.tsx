@@ -1,9 +1,9 @@
-import { COLORS } from '@/constants/colors';
-import { AREA_LIST } from '@/constants/register';
-import { RegisterFormType } from '@/types/register';
+import { COLORS } from 'constants/colors';
+import { AREA_LIST } from 'constants/register';
 import { Control, Controller } from 'react-hook-form';
 import { ScrollView, Text, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import { RegisterFormType } from 'types/register';
 import BoxButton from '../Button/BoxButton';
 import Subheader from '../Header/SubHeader';
 

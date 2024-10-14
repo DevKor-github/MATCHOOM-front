@@ -1,7 +1,7 @@
 import { TouchableOpacity, View } from 'react-native';
-import { navigateToHomeTab } from '@/utils/handleTabNavigation';
-import TextLogo from '@/assets/icons/logo-text.svg';
-import Logo from '@/assets/icons/logo.svg';
+import { navigateToHomeTab } from 'utils/handleTabNavigation';
+import TextLogo from 'assets/icons/logo-text.svg';
+import Logo from 'assets/icons/logo.svg';
 
 const Header = () => {
   const handleClick = () => {

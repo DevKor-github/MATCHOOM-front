@@ -1,20 +1,20 @@
-import { DEFAULT_REGISTER_FORM } from '@/constants/register';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { DEFAULT_REGISTER_FORM } from 'constants/register';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Text, TouchableOpacity, View } from 'react-native';
-import RoundButton from '@/features/register/Button/RoundButton';
-import AreaInputTab from '@/features/register/Tab/AreaInputTab';
-import AuthInputTab from '@/features/register/Tab/AuthInputTab';
-import InfoInputTab from '@/features/register/Tab/InfoInputTab';
-import LabelInputTab from '@/features/register/Tab/LabelInputTab';
-import StartTab from '@/features/register/Tab/StartTab';
+import RoundButton from 'features/register/Button/RoundButton';
+import AreaInputTab from 'features/register/Tab/AreaInputTab';
+import AuthInputTab from 'features/register/Tab/AuthInputTab';
+import InfoInputTab from 'features/register/Tab/InfoInputTab';
+import LabelInputTab from 'features/register/Tab/LabelInputTab';
+import StartTab from 'features/register/Tab/StartTab';
 import {
   RegisterFormType,
   TabType,
   TabTypeValues,
   registerSchema,
-} from '@/types/register';
+} from 'types/register';
 
 const TEXT = {
   matchoom: 'matchoom',

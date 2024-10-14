@@ -8,7 +8,7 @@ import {
   getRefreshToken,
   setAccessToken,
   setRefreshToken,
-} from '@/utils/handleToken';
+} from 'utils/handleToken';
 
 interface MessageType {
   type: string;

@@ -1,4 +1,4 @@
-import { AREA_LIST, LABEL_LIST } from '@/constants/register';
+import { AREA_LIST, LABEL_LIST } from 'constants/register';
 import { z } from 'zod';
 
 export const TabType: { [key: number]: string } = {
