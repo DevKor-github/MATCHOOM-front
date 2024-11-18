@@ -1,8 +1,9 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { DEFAULT_REGISTER_FORM } from 'constants/register';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Text, TouchableOpacity, View } from 'react-native';
+import { useAppNavigation } from 'hooks/useAppNavigation';
 import { usePostRegister } from 'services/auth/api';
 import RoundButton from 'features/register/components/Button/RoundButton';
 import AreaInputTab from 'features/register/components/Tab/AreaInputTab';
@@ -43,6 +44,7 @@ const TABS: Record<TabTypeValues, (props: any) => React.ReactNode> = {
 };
 
 const RegisterPage = () => {
+  const navigation = useAppNavigation();
   const [tab, setTab] = useState(0);
   const {
     control,
@@ -56,6 +58,12 @@ const RegisterPage = () => {
   });
 
   const { mutate, isSuccess } = usePostRegister();
+
+  useEffect(() => {
+    if (isSuccess) {
+      navigation.navigate('HomeTab');
+    }
+  }, [isSuccess, navigation]);
 
   const onSubmit = (data: RegisterFormType) => {
     console.log('현재 탭 데이터:', data);

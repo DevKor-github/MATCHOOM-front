@@ -1,11 +1,11 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Control, Controller, useForm } from 'react-hook-form';
-import { Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { TextInput, View } from 'react-native';
+import { useAppNavigation } from 'hooks/useAppNavigation';
 import { usePostLogin } from 'services/auth/api';
 import RoundButton from 'features/register/components/Button/RoundButton';
 import { DEFAULT_LOGIN_FORM } from 'features/register/constants/register';
-import { fetchRegisterData } from 'features/register/utils/register';
 import { LoginFormType, loginSchema } from 'types/auth';
 
 const TEXT = {
@@ -46,6 +46,7 @@ const InputField = ({
 );
 
 const LoginPage = () => {
+  const navigation = useAppNavigation();
   const {
     control,
     handleSubmit,
@@ -64,9 +65,9 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (isSuccess) {
-      console.log('로그인 성공');
+      navigation.navigate('HomeTab');
     }
-  }, [isSuccess]);
+  }, [isSuccess, navigation]);
 
   const onPress = () => {
     handleSubmit(onSubmit)();

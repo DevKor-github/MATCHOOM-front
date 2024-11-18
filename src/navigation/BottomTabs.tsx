@@ -6,6 +6,13 @@ import HomeStack from './HomeStack';
 
 const Tab = createBottomTabNavigator();
 
+export type RootTabParamList = {
+  HomeTab: undefined;
+  ExploreTab: undefined;
+  MessageTab: undefined;
+  MyTab: undefined;
+};
+
 const BottomTabs = () => {
   return (
     <Tab.Navigator
