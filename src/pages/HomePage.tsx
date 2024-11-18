@@ -5,7 +5,7 @@ import WebView from 'react-native-webview';
 type Props = NativeStackScreenProps<HomeStackType, 'Home'>;
 
 const HomePage = ({ navigation }: Props) => {
-  return <WebView source={{ uri: 'https://portal.korea.ac.kr/' }} />;
+  return <WebView source={{ uri: 'http://localhost:3000/home' }} />;
 };
 
 export default HomePage;

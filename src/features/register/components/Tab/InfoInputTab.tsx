@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { Control, Controller, useWatch } from 'react-hook-form';
 import { Text, View } from 'react-native';
 import DatePicker from 'react-native-date-picker';
-import { getStringByDate } from 'utils/date';
-import { RegisterFormType } from 'types/register';
-import BoxButton from '../Button/BoxButton';
-import Subheader from '../Header/SubHeader';
+import BoxButton from 'features/register/components/Button/BoxButton';
+import Subheader from 'features/register/components/Header/SubHeader';
+import { getStringByDate } from 'features/register/utils/date';
+import { RegisterFormType } from 'types/auth';
 
 const TEXT = {
   header: '나이와 성별을 알려주세요',
@@ -71,7 +71,7 @@ const InfoInputTab = ({
         </Text>
         <View className='h-12 w-full'>
           <BoxButton
-            text={birth ? getStringByDate(birth) : TEXT.placeholder.date}
+            text={birth ? getStringByDate(birth, ' / ') : TEXT.placeholder.date}
             onPress={() => {
               setOpen(!open);
             }}

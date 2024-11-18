@@ -1245,8 +1245,6 @@ PODS:
     - React-Core
   - react-native-date-picker (5.0.7):
     - React-Core
-  - react-native-encrypted-storage (4.0.3):
-    - React-Core
   - react-native-safe-area-context (4.11.0):
     - React-Core
   - react-native-splash-screen (3.3.0):
@@ -1602,7 +1600,6 @@ DEPENDENCIES:
   - React-microtasksnativemodule (from `../node_modules/react-native/ReactCommon/react/nativemodule/microtasks`)
   - react-native-config (from `../node_modules/react-native-config`)
   - react-native-date-picker (from `../node_modules/react-native-date-picker`)
-  - react-native-encrypted-storage (from `../node_modules/react-native-encrypted-storage`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - react-native-webview (from `../node_modules/react-native-webview`)
@@ -1719,8 +1716,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-config"
   react-native-date-picker:
     :path: "../node_modules/react-native-date-picker"
-  react-native-encrypted-storage:
-    :path: "../node_modules/react-native-encrypted-storage"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-splash-screen:
@@ -1827,7 +1822,6 @@ SPEC CHECKSUMS:
   React-microtasksnativemodule: 4943ad8f99be8ccf5a63329fa7d269816609df9e
   react-native-config: 8f7283449bbb048902f4e764affbbf24504454af
   react-native-date-picker: 06a4d96ab525a163c7a90bccd68833d136b0bb13
-  react-native-encrypted-storage: db300a3f2f0aba1e818417c1c0a6be549038deb7
   react-native-safe-area-context: 851c62c48dce80ccaa5637b6aa5991a1bc36eca9
   react-native-splash-screen: 4312f786b13a81b5169ef346d76d33bc0c6dc457
   react-native-webview: 926d2665cf3196e39c4449a72d136d0a53b9df8a
@@ -1861,8 +1855,8 @@ SPEC CHECKSUMS:
   RNScreens: 19719a9c326e925498ac3b2d35c4e50fe87afc06
   RNSVG: 5da7a24f31968ec74f0b091e3440080f347e279b
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
-  Yoga: 1354c027ab07c7736f99a3bef16172d6f1b12b47
+  Yoga: 4ef80d96a5534f0e01b3055f17d1e19a9fc61b63
 
 PODFILE CHECKSUM: 7678f30908407f34f1b11d40d55b000897f0fb22
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

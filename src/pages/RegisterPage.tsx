@@ -3,18 +3,20 @@ import { DEFAULT_REGISTER_FORM } from 'constants/register';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Text, TouchableOpacity, View } from 'react-native';
-import RoundButton from 'features/register/Button/RoundButton';
-import AreaInputTab from 'features/register/Tab/AreaInputTab';
-import AuthInputTab from 'features/register/Tab/AuthInputTab';
-import InfoInputTab from 'features/register/Tab/InfoInputTab';
-import LabelInputTab from 'features/register/Tab/LabelInputTab';
-import StartTab from 'features/register/Tab/StartTab';
+import { usePostRegister } from 'services/auth/api';
+import RoundButton from 'features/register/components/Button/RoundButton';
+import AreaInputTab from 'features/register/components/Tab/AreaInputTab';
+import AuthInputTab from 'features/register/components/Tab/AuthInputTab';
+import InfoInputTab from 'features/register/components/Tab/InfoInputTab';
+import LabelInputTab from 'features/register/components/Tab/LabelInputTab';
+import StartTab from 'features/register/components/Tab/StartTab';
+import { fetchRegisterData } from 'features/register/utils/register';
 import {
   RegisterFormType,
   TabType,
   TabTypeValues,
   registerSchema,
-} from 'types/register';
+} from 'types/auth';
 
 const TEXT = {
   matchoom: 'matchoom',
@@ -53,11 +55,14 @@ const RegisterPage = () => {
     defaultValues: DEFAULT_REGISTER_FORM,
   });
 
+  const { mutate, isSuccess } = usePostRegister();
+
   const onSubmit = (data: RegisterFormType) => {
     console.log('현재 탭 데이터:', data);
+    const request = fetchRegisterData(data);
     if (tab === Object.keys(TabType).length - 1) {
       console.log('최종 제출 데이터:', data);
-      // 여기에 최종 제출 로직 추가
+      mutate(data);
     } else {
       setTab(tab + 1);
     }
@@ -67,6 +72,7 @@ const RegisterPage = () => {
     if (tab === 0) {
       setTab(tab + 1);
     } else {
+      console.log('handlesubmit');
       handleSubmit(onSubmit)();
     }
   };

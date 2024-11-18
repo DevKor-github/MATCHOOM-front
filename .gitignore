@@ -60,6 +60,7 @@ buck-out/
 env
 .env
 .env*.local
+.env*
 
 # ios Podfile
 ios/Pods

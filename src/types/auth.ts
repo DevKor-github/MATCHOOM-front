@@ -32,7 +32,7 @@ export const registerSchema = z
     gender: z.enum(['male', 'female']).optional(),
     birth: z.date().optional(),
     area: z.array(z.enum(AREA_LIST as [string, ...string[]])).optional(),
-    label: z.array(z.enum(LABEL_LIST as [string, ...string[]])).optional(),
+    label: z.array(z.number()).optional(),
   })
   .refine((data) => data.pw === data.pwcheck, {
     path: ['pwcheck'],
@@ -40,3 +40,10 @@ export const registerSchema = z
   });
 
 export type RegisterFormType = z.infer<typeof registerSchema>;
+
+export const loginSchema = z.object({
+  number: z.string().regex(/^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/),
+  pw: z.string().min(8, '비밀번호는 최소 8자 이상이어야 합니다.'),
+});
+
+export type LoginFormType = z.infer<typeof loginSchema>;

@@ -1,6 +1,6 @@
 import { Control, Controller, FieldError, FieldErrors } from 'react-hook-form';
 import { Text, TextInput, View } from 'react-native';
-import { RegisterFormType } from 'types/register';
+import { RegisterFormType } from 'types/auth';
 import BoxButton from '../Button/BoxButton';
 
 const TEXT = {
@@ -25,11 +25,11 @@ const Label = ({ label, error }: { label: string; error?: FieldError }) => (
   <View className='flex-row'>
     <View className='flex-row'>
       <Text className='text-sm text-white'>{label}</Text>
-      <Text className='text-warningRed ml-1 text-lg'>
+      <Text className='ml-1 text-lg text-warningRed'>
         {TEXT.label.required}
       </Text>
     </View>
-    {error && <Text className='text-warningRed text-sm'>{error.message}</Text>}
+    {error && <Text className='text-sm text-warningRed'>{error.message}</Text>}
   </View>
 );
 
