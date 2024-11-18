@@ -1,4 +1,4 @@
-import { RegisterFormType } from 'types/register';
+import { RegisterFormType } from 'types/auth';
 
 const AREA_LIST = [
   '전국',
