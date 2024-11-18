@@ -15,3 +15,7 @@ export type PostRegisterResponse = {
   accessToken: string;
   refreshToken: string;
 };
+
+export type RefreshAccessTokenResponse = {
+  accessToken: string;
+};

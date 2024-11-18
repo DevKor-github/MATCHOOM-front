@@ -12,6 +12,7 @@ import {
   PostLoginResponse,
   PostRegisterRequest,
   PostRegisterResponse,
+  RefreshAccessTokenResponse,
 } from './type';
 
 const postRegister = async (
@@ -111,3 +112,9 @@ export const usePostLogin = (): UseMutationResult<
     },
   });
 };
+
+export const refreshAccessToken =
+  async (): Promise<RefreshAccessTokenResponse> => {
+    const response = await instance.post('/auth/refresh-token');
+    return response.data;
+  };
